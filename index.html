@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <section class="hero is-dark level">
+        <div class="hero-body is-centered has-text-centered is-vcentered">
+            <div class="level">
+                <div class="level-item">
+                    <span class="icon">
+                        <i class="fas fa-sun fa-5x"></i>
+                    </span>
+                </div>
+                <div class="level-item">
+                    <h1 class="title has-text-light">
+                        <strong>Weather Dashboard</strong>
+                    </h1>
+                </div>
+                <div class="level-item">
+                    <span class="icon">
+                        <i class="fab fa-cloudversify fa-5x"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container customMargin">
+        <div class="columns">
+            <div class="column is-4">
+                <!-- content the user will manipulate -->
+                
+                <div class="field">
+                        <label for="City">Search for a City:</label>
+                        <br>
+                        <input class="input is-left" type="text" placeholder="City">
+                        <button type="submit" class="button is-small is-info is-hovered is-right" id="searchCity">
+                            <i class="fas fa-search fa-2x"></i>
+                        </button>
+                </div>
+                <!-- previous locations should populate here -->
+                <table class="table is-hoverable is-bordered" id="prevCities">
+                    <tr>
+                        <td>
+                            <a href="#">previous city</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="column is-8">
+                <!-- content the app will display for user -->
+            </div>
+        </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</body>
+
+</html>

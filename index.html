@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 
@@ -44,7 +44,7 @@
                 <div class="field">
                         <label for="City">Search for a City:</label>
                         <br>
-                        <input class="input is-left" type="text" placeholder="City">
+                        <input class="input is-left" type="text" placeholder="City" id="locationText">
                         <button type="submit" class="button is-small is-info is-hovered is-right" id="searchCity">
                             <i class="fas fa-search fa-2x has-text-dark"></i>
                         </button>
@@ -64,22 +64,22 @@
                     <div class="tile is-vertical is-12">
                       <div class="tile">
                         <div class="tile is-parent is-vertical">
-                          <article class="tile is-child notification is-primary" id="currentCity">
-                            <p class="title">City Name (0/00/0000)</p>
+                          <article class="tile is-child notification is-primary">
+                            <p class="title" id="currentCity">City Name (0/00/0000)</p>
                           </article>
                           <article class="tile is-child notification is-warning">
                             <p class="subtitle">icon(image)</p>
                             <figure class="image is-4by3">
-                              <img src="https://bulma.io/images/placeholders/640x480.png">
+                              <img id="weatherImage" src="https://bulma.io/images/placeholders/640x480.png">
                             </figure>
                           </article>
                         </div>
                         <div class="tile is-parent">
                           <article class="tile is-child notification is-info">
-                            <p class="title">Middle tile</p>
+                            <p class="title" id="theDate">Date ()</p>
                             <br>
                             <p class="subtitle" id="cityTemp">City Temp:00.0 F</p>
-                            <p class="subtitle" id="ciityHumidity">Humidity:00%</p>
+                            <p class="subtitle" id="cityHumidity">Humidity:00%</p>
                             <p class="subtitle" id="cityWind">Wind Speed: 0.0 MPH</p>
                             <p class="subtitle" id="cityIndex">UV Index: 0.00</p>
                           </article>
@@ -102,6 +102,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -2,104 +2,104 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Weather Dashboard</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="./assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
-    <section class="hero is-dark level">
-        <div class="hero-body is-centered has-text-centered is-vcentered">
-            <div class="level">
-                <!--    sun awesomefont icon     -->
-                <div class="level-item">
-                    <span class="icon">
-                        <i class="fas fa-sun fa-5x has-text-warning"></i>
-                    </span>
-                </div>
-                <!--    WebPage title       -->
-                <div class="level-item">
-                    <h1 class="title has-text-info customTitle">
-                        <strong>Weather Dashboard</strong>
-                    </h1>
-                </div>
-                <!--    cloud awesomefont icon -->
-                <div class="level-item">
-                    <span class="icon">
-                        <i class="fab fa-cloudversify fa-5x iconCloud"></i>
-                    </span>
-                </div>
-            </div>
+  <section class="hero is-dark level">
+    <div class="hero-body is-centered has-text-centered is-vcentered">
+      <div class="level">
+        <!--    sun awesomefont icon     -->
+        <div class="level-item">
+          <span class="icon">
+            <i class="fas fa-sun fa-5x has-text-warning"></i>
+          </span>
         </div>
-    </section>
+        <!--    WebPage title       -->
+        <div class="level-item">
+          <h1 class="title has-text-info customTitle">
+            <strong>Weather Dashboard</strong>
+          </h1>
+        </div>
+        <!--    cloud awesomefont icon -->
+        <div class="level-item">
+          <span class="icon">
+            <i class="fab fa-cloudversify fa-5x iconCloud"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="container customMargin">
-        <div class="columns">
-            <div class="column is-4">
-                <!-- content the user will manipulate -->
-                
-                <div class="field">
-                        <label for="City">Search for a City:</label>
-                        <br>
-                        <input class="input is-left" type="text" placeholder="City" id="locationText">
-                        <button type="submit" class="button is-small is-info is-hovered is-right" id="searchCity">
-                            <i class="fas fa-search fa-2x has-text-dark"></i>
-                        </button>
-                </div>
-                <!-- previous locations should populate here -->
-                <div class="table is-hoverable is-bordered" id="prevCities">
-                    
-                  
-                </div>
-            </div>
-            <div class="column is-8">
-                <!-- content the app will display for user -->
-                <div class="tile is-ancestor">
-                    <div class="tile is-vertical is-12">
-                      <div class="tile">
-                        <div class="tile is-parent is-vertical">
-                          <article class="tile is-child notification is-primary">
-                            <p class="title" id="currentCity">City Name (0/00/0000)</p>
-                          </article>
-                          <!-- <article class="tile is-child notification is-warning">
+  <section class="container customMargin">
+    <div class="columns">
+      <div class="column is-4">
+        <!-- content the user will manipulate -->
+
+        <div class="field">
+          <label for="City">Search for a City:</label>
+          <br>
+          <input class="input is-left" type="text" placeholder="City" id="locationText">
+          <button type="submit" class="button is-small is-info is-hovered is-right" id="searchCity">
+            <i class="fas fa-search fa-2x has-text-dark"></i>
+          </button>
+        </div>
+        <!-- previous locations should populate here -->
+        <div class="table is-hoverable is-bordered" id="prevCities">
+
+
+        </div>
+      </div>
+      <div class="column is-8">
+        <!-- content the app will display for user -->
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-12">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <article class="tile is-child notification is-primary">
+                  <p class="title" id="currentCity">City Name (0/00/0000)</p>
+                </article>
+                <!-- <article class="tile is-child notification is-warning">
                             <p class="subtitle">icon(image)</p>
                             <figure class="image is-4by3">
                               <img id="weatherImage" src="https://bulma.io/images/placeholders/640x480.png">
                             </figure>
                           </article> -->
-                        </div>
-                        <div class="tile is-parent">
-                          <article class="tile is-child notification is-info">
-                            <p class="title" id="theDate">Date ()</p>
-                            <br>
-                            <p class="subtitle" id="cityTemp">City Temp:00.0 F</p>
-                            <p class="subtitle" id="cityHumidity">Humidity:00%</p>
-                            <p class="subtitle" id="cityWind">Wind Speed: 0.0 MPH</p>
-                            <p class="subtitle" id="cityIndex">UV Index: 0.00</p>
-                          </article>
-                        </div>
-                      </div>
-                      <div class="tile is-parent">
-                        <article class="tile is-child notification is-danger">
-                          <p class="title">Wide tile</p>
-                          <p class="subtitle">Aligned with the right tile</p>
-                          <div class="content">
-                            <!-- Content -->
-                          </div>
-                        </article>
-                      </div>
-                    </div>
-                </div>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title" id="theDate">Date ()</p>
+                  <br>
+                  <p class="subtitle" id="cityTemp">City Temp:00.0 F</p>
+                  <p class="subtitle" id="cityHumidity">Humidity:00%</p>
+                  <p class="subtitle" id="cityWind">Wind Speed: 0.0 MPH</p>
+                  <p class="subtitle" id="cityIndex">UV Index: 0.00</p>
+                </article>
+              </div>
             </div>
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-danger">
+                <p class="title">Wide tile</p>
+                <p class="subtitle">Aligned with the right tile</p>
+                <div class="content">
+                  <!-- Content -->
+                </div>
+              </article>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-    <script src="./script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
